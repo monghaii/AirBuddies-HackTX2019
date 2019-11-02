@@ -5,3 +5,11 @@ body {
 h1 {
 
 }
+
+.bg-light {
+    background-color: #F7FCFF;
+}
+
+.mainDiv {
+    min-height: 100vh;
+}
