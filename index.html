@@ -7,10 +7,16 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../../../favicon.ico">
-        <title>American Airlines Seat Allocator</title>
+        <title>Airbuddies!</title>
 
         <!--Template based on URL below-->
         <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+        
+        <!-- jquery -->
+        <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,9 +29,25 @@
 
     <body>
 
-        <h1>American Airlines Seat Optimization Simulation</h1>
-        <button type="button" class="btn btn-primary">Primary</button>
-
+        <nav class="navbar sticky-top navbar-light bg-light">
+          <a class="navbar-brand" href="#">Air Buddies!</a>
+        </nav>
+        <div class="container bg-light mainDiv">
+            <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+              </div>
+            </div>
+            <button type="button" id="test" class="btn btn-primary">Primary</button>
+          <!-- Content here -->
+          
+        </div>
+        <!-- Import Frontend Javascript-->
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="frontend.js"></script>
+        
+        
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
