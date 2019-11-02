@@ -1,15 +1,46 @@
 body {
-    background-color: #005C8E;
+    background-color: #C5DCE2;
 }
 
 h1 {
+    color:white;
+    font-family: arial;
+}
 
+h2 {
+    color:#2B2D42;
+}
+
+.card {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    color: #2B2D42 !important;
 }
 
 .bg-light {
     background-color: #F7FCFF;
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,.2);
 }
 
 .mainDiv {
     min-height: 100vh;
+    min-width: 95vw;
+    padding-top: 40px;
+    margin-left: 2.5 vw;
+}
+
+.splashIMG {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-image: url(images/splash.jpg);
+    background-size: cover;
+}
+
+.mainNav {
+    margin-top: -200;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 2px -2px rgba(0,0,0,.2);
 }
