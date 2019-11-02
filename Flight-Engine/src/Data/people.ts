@@ -2,5 +2,5 @@ export default [
     {
       age: description
     }
-  ] as People[];
+  ] as Person[];
   
