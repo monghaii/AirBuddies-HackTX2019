@@ -1,6 +1,7 @@
 import seedrandom from 'seedrandom';
 import haversine from 'haversine-distance';
 import aircraft from './Data/aircraft';
+import people from './Data/people';
 
 const createRandomGenerator = (seed: string): (() => number) => {
   if (seed === undefined || seed === null) {
@@ -17,6 +18,19 @@ const createRandomGenerator = (seed: string): (() => number) => {
 
 // Determine miles value for distance between two locations (lat/lon)
 const calcDistance = (a: Location, b: Location): number => Math.round(haversine(a, b) / 1609.344);
+
+// Returns an arary of n number of people
+const get_people = (num_people:number): Person[] => {
+  var array_result = [];
+  var temp_people = people;
+  // adds "num_people" to the array list
+  for (var i = 0; i < num_people; i++) {
+    var index = Math.floor(Math.random()*temp_people.length)
+    array_result.push(temp_people[index]);
+    temp_people.splice(index, 1);
+  }
+  return array_result;
+};
 
 export default class Generator {
   random: (min?: number, max?: number) => number;
@@ -61,6 +75,9 @@ export default class Generator {
     duration.hours = Math.floor(duration.hours);
     duration.locale = `${duration.hours}h ${duration.minutes}m`;
 
+    // Get the people on this flight
+    const people_on_flight = get_people(100);
+
     return {
       flightNumber,
       origin,
@@ -68,6 +85,7 @@ export default class Generator {
       distance,
       duration,
       aircraft: randAircraft,
+      people_on_flight,
     };
   }
 }
