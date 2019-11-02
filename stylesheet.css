@@ -19,6 +19,26 @@ h2 {
     max-width: 70vw;
 }
 
+.buttonCard {
+    padding: 30px;
+    margin-bottom: 30px;
+    color: #2B2D42 !important;
+    border-radius: 25px;
+    max-width: 30vw;
+    min-height: 15vh;
+    text-align: center;
+}
+
+.buttonCard button {
+    background-color: #DB5851;
+    border-radius: 25px;
+    display: inline;
+    text-align: center;
+    margin: -10px;
+    min-height: 50px;
+    min-width: 25vw;
+}
+
 .bg-light {
     background-color: #F7FCFF;
     box-shadow: 0 5px 10px -2px rgba(0,0,0,.2);
