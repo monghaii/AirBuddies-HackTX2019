@@ -28,7 +28,13 @@ declare interface FlightDuration {
 }
 
 declare interface Person{
-  age: description;
+  name: string;
+  age: number;
+  class: number;
+  flight_number: number;
+  family: boolean;
+  seat_location: number;
+  interests: boolean[];
 }
 
 declare interface Flight {
