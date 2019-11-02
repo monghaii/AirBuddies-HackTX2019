@@ -30,11 +30,12 @@ declare interface FlightDuration {
 declare interface Person{
   name: string;
   age: number;
-  class: number;
-  flight_number: number;
+  firstClass: boolean;
+  doNotDisturb: boolean;
+  //flight_number: string;
   family: boolean;
-  seat_location: number; // 1 - aisle,
-  interests: boolean[]; // [music, food, dance, art, computer science]
+  seat_location: number; // 1 - aisle, 2 - window, 3 - no preference/other
+  interests: boolean[]; // [music, food, games, art, computer science]
 }
 
 declare interface Flight {
