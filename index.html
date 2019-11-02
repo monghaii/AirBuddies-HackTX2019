@@ -7,10 +7,16 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../../../favicon.ico">
-        <title>American Airlines Seat Allocator</title>
+        <title>Airbuddies!</title>
 
         <!--Template based on URL below-->
         <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+        
+        <!-- jquery -->
+        <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,10 +28,59 @@
     </head>
 
     <body>
-
-        <h1>American Airlines!</h1>
-
-
+        <nav class="mainNav navbar sticky-top navbar-light bg-light">
+          <img src='images/logo.png' height='40'> 
+        </nav>
+            <div class="splashIMG jumbotron jumbotron-fluid">
+              <div class="container">
+                <h1 class="display-4">Find your Buddy.</h1>
+                <p class="lead" style="color: white;">Powered by American Airlines.</p>
+              </div>
+            </div>
+            <div class="card container bg-light">
+                <div class="row">
+                    <div class="col-sm-4">
+                        col-sm-4
+                    </div>
+                    <div class="col-sm-8">
+                        <h2>Simple and Friendly.</h2>
+                        <p>Find an amazing flight partner with just the click of a button!</p>
+                    </div>
+                </div>
+            </div>  
+            <div class="card container bg-light">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2>Anytime, Anywhere.</h2>
+                        <p>Choose from hundreds of destinations among thousands of American Airlines™ flights.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        col-sm-4
+                    </div>
+                </div>
+            </div>  
+            <div class="card container bg-light">
+                <div class="row">
+                    <div class="col-sm-4">
+                        col-sm-4
+                    </div>
+                    <div class="col-sm-8">
+                        <h2>Personalized. Just for You.</h2>
+                        <p>Choose from hundreds of destinations among thousands of American Airlines™ flights.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        
+        
+        
+            <button type="button" id="test" class="btn btn-primary">Primary</button>
+          <!-- Content here -->
+        <!-- Import Frontend Javascript-->
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="frontend.js"></script>
+        
+        
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
