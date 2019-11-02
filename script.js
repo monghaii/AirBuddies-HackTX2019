@@ -1,10 +1,18 @@
-function getMatches(flight_number, age, doNotDisturb, family, firstClass, seatLocation, interests){
+function get_people_on_flight(origin, destination){
+    var seed = "seed";
+    const { Generator } = require('./Flight-Engine/src/Generator');
+    var generator = new Generator(seed);
+    return generator.flight(origin, destination).people_on_flight;
+
+}
+
+function getMatches(origin, destination, age, doNotDisturb, family, firstClass, seatLocation, interests){
 
     // function sends in a flight number and recies back a person array *Jennifer
-    var people_on_flight = call_function(flight_number);
+    var people_on_flight = get_people_on_flight(origin, destination);
     var output = new Array(5);
     var compareScores = [0, 0, 0, 0, 0];
-    // TODO create a way to look through the list of peeople and get the "highest match"
+
     for (index = 0; index < people_on_flight.length; index++) { 
         var compareScore = 0;
         var tempPerson = people_on_flight[index];
