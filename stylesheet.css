@@ -12,9 +12,31 @@ h2 {
 }
 
 .card {
-    padding-top: 10px;
-    margin-bottom: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
     color: #2B2D42 !important;
+    border-radius: 25px;
+    max-width: 70vw;
+}
+
+.buttonCard {
+    padding: 30px;
+    margin-bottom: 30px;
+    color: #2B2D42 !important;
+    border-radius: 25px;
+    max-width: 30vw;
+    min-height: 15vh;
+    text-align: center;
+}
+
+.buttonCard button {
+    background-color: #DB5851;
+    border-radius: 25px;
+    display: inline;
+    text-align: center;
+    margin: -10px;
+    min-height: 50px;
+    min-width: 25vw;
 }
 
 .bg-light {
@@ -44,3 +66,22 @@ h2 {
     padding-bottom: 20px;
     box-shadow: 0 5px 2px -2px rgba(0,0,0,.2);
 }
+
+.icons {
+    max-width: 200px;
+}
+
+/*Application*/
+
+.appDiv {
+    border-radius: 25px;
+    padding: 25px;
+    margin-top: 20px;
+    min-height: 80vh;
+    min-width: 85vw;
+}
+
+.leftCol {
+    text-align: center;
+}
+
