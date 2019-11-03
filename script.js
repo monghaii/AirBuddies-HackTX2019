@@ -49,13 +49,13 @@ function getMatches(origin, destination, age, doNotDisturb, family, firstClass, 
 
         // If both want to sit in different seats, +15 to compatibility score
         if(seatLocation != tempPerson.seatLocation) {
-            compareScore += 15;
+            compareScore += 25;
         }
 
         // For every shared interest, +20 to compatibility score
         for(x = 0; x < interests.length; x++) {
             if(interests[x] && tempPerson.interests[x]) {
-                compareScore += 20;
+                compareScore += 50;
             }
         }
 
