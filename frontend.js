@@ -59,7 +59,7 @@ $(document).ready(function(e) {
         var result = getMatches(origin, dest, age, DND, family, firstClass, 3, interests);
 
         // Format data returned
-        var seatLocations = ["Aisle", "Center", "Window"];
+        var seatLocations = ["none", "Aisle", "Center", "Window"];
         var interestOptions = ["Sports", "Video Games", "Music", "Art", "Travel"];
         var individInterests = [0, 0, 0, 0, 0];
         for(var person = 0; person < 5; person++) {
@@ -71,7 +71,7 @@ $(document).ready(function(e) {
         }
 
         // manipulate DOM
-        $("#resultString").text("Results for flight " + get_flight_num(origin, dest));
+        $("#resultString").text("Results for Flight " + get_flight_num(origin, dest));
         $("#name1").text(result[0].name);
         $("#name2").text(result[1].name);
         $("#name3").text(result[2].name);
