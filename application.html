@@ -35,23 +35,24 @@
         <div class="row">
             <div class="leftCol col-sm-6">
                 <h3 class='title'>Select your preferences:</h3>
-                <form>
+                
+                <form id="form">
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="inputEmail4" class='text_right'>Origin</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Austin, TX">
+                      <label for="origin" class='text_right'>Origin</label>
+                      <input type="text" class="form-control" id="origin" placeholder="DFW">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputPassword4" class='text-right'>Destination</label>
-                      <input type="password" class="form-control" id="inputPassword4" placeholder="Los Angeles, California">
+                      <label for="dest" class='text-right'>Destination</label>
+                      <input type="text" class="form-control" id="dest" placeholder="JFK">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="inputCity">Interest</label>
-                      <select id="inputState" class="form-control">
+                      <label for="interest">Interest</label>
+                      <select id="interest" class="form-control">
                         <option selected>Choose...</option>
-                        <option>Sport</option>
+                        <option>Sports</option>
                         <option>Video Games</option>
                         <option>Music</option>
                         <option>Art</option>
@@ -59,8 +60,8 @@
                       </select>
                     </div>
                     <div class="form-group col-md-4">
-                      <label for="inputState">Seat Location</label>
-                      <select id="inputState" class="form-control">
+                      <label for="seatLocation">Seat Location</label>
+                      <select id="seatLocation" class="form-control">
                         <option selected>Choose...</option>
                         <option>Aisle</option>
                         <option>Center</option>
@@ -68,32 +69,32 @@
                       </select>
                     </div>
                     <div class="form-group col-md-2">
-                      <label for="inputZip">Age</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <label for="age">Age</label>
+                      <input type="text" class="form-control" id="age">
                     </div>
                   </div>
                   <p>Other preferences: </p>
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="gridCheck">
-                      <label class="form-check-label" for="gridCheck">
+                      <input class="form-check-input" type="checkbox" id="family">
+                      <label class="form-check-label" for="family">
                         Family
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="gridCheck">
-                      <label class="form-check-label" for="gridCheck">
+                      <input class="form-check-input" type="checkbox" id="DND">
+                      <label class="form-check-label" for="DND">
                         Do not disturb
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="gridCheck">
-                      <label class="form-check-label" for="gridCheck">
+                      <input class="form-check-input" type="checkbox" id="firstClass">
+                      <label class="form-check-label" for="firstClass">
                         First class
                       </label>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                 </form>
 
 
@@ -146,7 +147,6 @@
             
         <!-- Content here -->
         <!-- Import Frontend Javascript-->
-        <script src="jquery-3.4.1.min.js"></script>
         <script src="frontend.js"></script>
         <!-- Bootstrap core JavaScript
         ================================================== -->
