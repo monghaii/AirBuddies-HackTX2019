@@ -1,35 +1,4 @@
 /*
-    Helper function to get the people on a certain flight
-*/
-function get_people_on_flight(origin_s, destination_s){
-    const { Generator } = require('./Flight-Engine/src/Generator');
-    const { airports } = require('./Flight-Engine/src/Data/airports');
-
-    var origin = "";
-    var destination = "";
-    
-    for(var i = 0 ; i < airports.length ; i++){
-        var code = airports[i].code;
-        if(code == origin_s)
-            origin = airports[i];
-        else if (code == destination_s)
-            destination = airports[i];
-    }
-
-    var seed = "seed";
-    var generator = new Generator(seed);
-
-    try {
-        var pof = generator.flight(origin, destination).people_on_flight;
-    } catch (err) {
-        alert("Could not generate flights");
-    }
-
-    return pof;
-
-}
-
-/*
     Gets the top 5 matches to a person
     
     Parameters:
@@ -45,10 +14,10 @@ function get_people_on_flight(origin_s, destination_s){
     Returns:
         Array of 5 Person
 */
-export function getMatches(origin, destination, age, doNotDisturb, family, firstClass, seatLocation, interests){
+function getMatches(origin, destination, age, doNotDisturb, family, firstClass, seatLocation, interests){
 
     // function sends in a flight number and recies back a person array *Jennifer
-    var people_on_flight = get_people_on_flight(origin, destination);
+    var people_on_flight = people_arr;
     var output = new Array(5);
     var compareScores = [0, 0, 0, 0, 0];
 
@@ -80,13 +49,13 @@ export function getMatches(origin, destination, age, doNotDisturb, family, first
 
         // If both want to sit in different seats, +15 to compatibility score
         if(seatLocation != tempPerson.seatLocation) {
-            compareScore += 15;
+            compareScore += 25;
         }
 
         // For every shared interest, +20 to compatibility score
         for(x = 0; x < interests.length; x++) {
             if(interests[x] && tempPerson.interests[x]) {
-                compareScore += 20;
+                compareScore += 50;
             }
         }
 
@@ -110,5 +79,35 @@ export function getMatches(origin, destination, age, doNotDisturb, family, first
             count++;
         }
     }
+
+    for(var i = 0 ; i < 5 ; i++){
+        console.log(output[i].name);
+    }
     return output;
+};
+
+function get_flight_num(origin, dest){
+    var flight_num = [1755, 2288, 4699, 2641, 3782, 5977, 3191, 8168, 7855, 4416, 4669, 7977, 3515, 683, 9806, 8609];
+    var org_num;
+    var dest_num;
+    if(origin == "JFK")
+        org_num = 0;
+    else if (origin == "DFW")
+        org_num = 1;
+    else if (origin == "LAX")
+        org_num = 2;
+    else 
+        org_num = 3;
+
+    if(dest == "JFK")
+        dest_num = 0;
+    else if (dest == "DFW")
+        dest_num = 1;
+    else if (dest == "LAX")
+        dest_num = 2;
+    else 
+        dest_num = 3;
+
+    return flight_num[org_num * 4 + dest_num];    
+
 };

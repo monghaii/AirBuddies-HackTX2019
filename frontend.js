@@ -1,9 +1,10 @@
 $(document).ready(function(e) { 
     $("#test").click(function() {
-//        var interests = [true, false, true, true, false];
-//        var result = getMatches("DFW", "JFK", 22, true, true, false, 3, interests)
+       var interests = [true, false, true, true, false];
+       var result = getMatches("DFW", "JFK", 22, true, true, false, 3, interests);
         alert("hello");
     })
+
     $("form").submit(function( event ) {
         var origin = $("#origin").val();
         var dest = $("#dest").val();
@@ -53,9 +54,19 @@ $(document).ready(function(e) {
         console.log(family);
         console.log(DND);
         console.log(firstClass);
-        console.log("interest" + interests);
+        console.log("interest " + interests);
         event.preventDefault();    
-        var result = getMatches(origin, dest, age, DND, family, firstClass, 3, interests)
+        var result = getMatches(origin, dest, age, DND, family, firstClass, 3, interests);
+        // result[index].descript
+        // descript can be 
+        //   name: asdf, 
+        //   age: 42,
+        //   firstClass: true,
+        //   doNotDisturb: false,
+        //   family: false,
+        //   seat_location: 2,
+        //   interests: [true, false, false, false, false],
+        console.log("first name: " + result[0].name);
     });
 });
 
