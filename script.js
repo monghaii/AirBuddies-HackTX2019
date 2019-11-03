@@ -1,35 +1,4 @@
 /*
-    Helper function to get the people on a certain flight
-*/
-function get_people_on_flight(origin_s, destination_s){
-    const { Generator } = require('./Flight-Engine/src/Generator');
-    const { airports } = require('./Flight-Engine/src/Data/airports');
-
-    var origin = "";
-    var destination = "";
-    
-    for(var i = 0 ; i < airports.length ; i++){
-        var code = airports[i].code;
-        if(code == origin_s)
-            origin = airports[i];
-        else if (code == destination_s)
-            destination = airports[i];
-    }
-
-    var seed = "seed";
-    var generator = new Generator(seed);
-
-    try {
-        var pof = generator.flight(origin, destination).people_on_flight;
-    } catch (err) {
-        alert("Could not generate flights");
-    }
-
-    return pof;
-
-}
-
-/*
     Gets the top 5 matches to a person
     
     Parameters:
@@ -45,10 +14,10 @@ function get_people_on_flight(origin_s, destination_s){
     Returns:
         Array of 5 Person
 */
-export function getMatches(origin, destination, age, doNotDisturb, family, firstClass, seatLocation, interests){
+function getMatches(origin, destination, age, doNotDisturb, family, firstClass, seatLocation, interests){
 
     // function sends in a flight number and recies back a person array *Jennifer
-    var people_on_flight = get_people_on_flight(origin, destination);
+    var people_on_flight = people_arr;
     var output = new Array(5);
     var compareScores = [0, 0, 0, 0, 0];
 
@@ -109,6 +78,10 @@ export function getMatches(origin, destination, age, doNotDisturb, family, first
             }
             count++;
         }
+    }
+
+    for(var i = 0 ; i < 5 ; i++){
+        console.log(output[i].name);
     }
     return output;
 };
