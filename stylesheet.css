@@ -97,3 +97,6 @@ h2 {
     padding-top: 5vh;
 }
 
+#wrappingDiv {
+    display: none;
+}
