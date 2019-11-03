@@ -1,10 +1,5 @@
 $(document).ready(function(e) { 
-    $("#test").click(function() {
-       var interests = [true, false, true, true, false];
-       var result = getMatches("DFW", "JFK", 22, true, true, false, 3, interests);
-        alert("hello");
-    })
-
+    // form submitted
     $("form").submit(function( event ) {
         var origin = $("#origin").val();
         var dest = $("#dest").val();
@@ -17,6 +12,7 @@ $(document).ready(function(e) {
         console.log(origin);
         console.log(dest);
         console.log(interest);
+        
         // set other preferences
         if ($('#family').is(":checked")){
           family = true;
@@ -49,24 +45,20 @@ $(document).ready(function(e) {
         } else if(interest == "Travel") {
             interests[4] = true;
         }
+        
+        // log inputs for debugging
         console.log("seatLocation" + seatLocation);
         console.log(age);
         console.log(family);
         console.log(DND);
         console.log(firstClass);
         console.log("interest " + interests);
-        event.preventDefault();    
+        event.preventDefault();
+        
+        // send to backend
         var result = getMatches(origin, dest, age, DND, family, firstClass, 3, interests);
-        // result[index].descript
-        // descript can be 
-        //   name: asdf, 
-        //   age: 42,
-        //   firstClass: true,
-        //   doNotDisturb: false,
-        //   family: false,
-        //   seat_location: 2,
-        //   interests: [true, false, false, false, false],
-        console.log(get_flight_num(origin, dest));
+
+        // Format data returned
         var seatLocations = ["Aisle", "Center", "Window"];
         var interestOptions = ["Sports", "Video Games", "Music", "Art", "Travel"];
         var individInterests = [0, 0, 0, 0, 0];
@@ -78,7 +70,7 @@ $(document).ready(function(e) {
             }          
         }
 
-        
+        // manipulate DOM
         $("#resultString").text("Results for flight " + get_flight_num(origin, dest));
         $("#name1").text(result[0].name);
         $("#name2").text(result[1].name);
