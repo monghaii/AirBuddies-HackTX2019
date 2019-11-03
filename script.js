@@ -85,3 +85,29 @@ function getMatches(origin, destination, age, doNotDisturb, family, firstClass, 
     }
     return output;
 };
+
+function get_flight_num(origin, dest){
+    var flight_num = [1755, 2288, 4699, 2641, 3782, 5977, 3191, 8168, 7855, 4416, 4669, 7977, 3515, 683, 9806, 8609];
+    var org_num;
+    var dest_num;
+    if(origin == "JFK")
+        org_num = 0;
+    else if (origin == "DFW")
+        org_num = 1;
+    else if (origin == "LAX")
+        org_num = 2;
+    else 
+        org_num = 3;
+
+    if(dest == "JFK")
+        dest_num = 0;
+    else if (dest == "DFW")
+        dest_num = 1;
+    else if (dest == "LAX")
+        dest_num = 2;
+    else 
+        dest_num = 3;
+
+    return flight_num[org_num * 4 + dest_num];    
+
+};
