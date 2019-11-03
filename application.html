@@ -33,8 +33,9 @@
         </nav>
         <div class="appDiv container bg-light">
         <div class="row">
+          <!-- COLUMN ON THE LEFT-->
             <div class="leftCol col-sm-6">
-                <h3 class='title'>Select your preferences:</h3>
+                <h3 class='title'>Select your preferences</h3>
                 <form>
                   <div class="form-row">
                     <div class="form-group col-md-6">
@@ -105,8 +106,36 @@
                 <!-- -->
                 <!-- -->
             </div>
+            <!-- COLUMN ON THE RIGHT-->
             <div class="col-sm-6">
-              Results will show on this side
+                <h3 class='title'>Results</h3>
+              <!-- MATCH 1 -->
+                <p style='text-align: center;'>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#match1" aria-expanded="false" aria-controls="match1">
+                      Match 1
+                    </button>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#match2" aria-expanded="false" aria-controls="match2">
+                        Match 2
+                    </button>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#match3" aria-expanded="false" aria-controls="match3">
+                        Match 3
+                    </button>
+                  </p>
+                  <div class="collapse" id="match1">
+                    <div class="card card-body">
+                      Tamago is Thuy's imaginary dog. Tamago looks like a cat, but he's a corgi. Tamago can speak Korean and Japanese.
+                    </div>
+                  </div> 
+                  <div class="collapse" id="match2">
+                      <div class="card card-body">
+                        Meow is a cat
+                      </div>
+                  </div>
+                  <div class="collapse" id="match3">
+                      <div class="card card-body">
+                        My name is Thuy
+                      </div>
+                  </div>  
             </div>
         </div>
         </div>  
