@@ -109,6 +109,11 @@ $(document).ready(function(e) {
                                "Interested in: " + individInterests[4] + "<br/>");
         $("#wrappingDiv").attr("style", "display:block");
     });
+    
+    jQuery('button').click( function(e) {
+        jQuery('.collapse').collapse('hide');
+    });
+    
 });
 
 
