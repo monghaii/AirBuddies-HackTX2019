@@ -86,3 +86,9 @@ h2 {
     text-align: center;
 }
 
+.btn-primary.custom-btn {
+    background-color: #DB5851;
+    border-color: #DB5851;
+}
+
+
