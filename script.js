@@ -1,12 +1,51 @@
-function get_people_on_flight(origin, destination){
-    var seed = "seed";
+/*
+    Helper function to get the people on a certain flight
+*/
+function get_people_on_flight(origin_s, destination_s){
     const { Generator } = require('./Flight-Engine/src/Generator');
+    const { airports } = require('./Flight-Engine/src/Data/airports');
+
+    var origin = "";
+    var destination = "";
+    
+    for(var i = 0 ; i < airports.length ; i++){
+        var code = airports[i].code;
+        if(code == origin_s)
+            origin = airports[i];
+        else if (code == destination_s)
+            destination = airports[i];
+    }
+
+    var seed = "seed";
     var generator = new Generator(seed);
-    return generator.flight(origin, destination).people_on_flight;
+
+    try {
+        var pof = generator.flight(origin, destination).people_on_flight;
+    } catch (err) {
+        alert("Could not generate flights");
+    }
+
+    return pof;
 
 }
 
-function getMatches(origin, destination, age, doNotDisturb, family, firstClass, seatLocation, interests){
+/*
+    Gets the top 5 matches to a person
+    
+    Parameters:
+        origin - string
+        destination - string
+        age - number
+        doNotDisturb - boolean
+        family - boolean
+        firstClass - boolean
+        seatLocation - number
+        interests - boolean[5]
+
+    Returns:
+        Array of 5 Person
+*/
+export function getMatches(origin, destination, age, doNotDisturb, family, firstClass, seatLocation, interests){
 
     // function sends in a flight number and recies back a person array *Jennifer
     var people_on_flight = get_people_on_flight(origin, destination);
@@ -72,4 +111,4 @@ function getMatches(origin, destination, age, doNotDisturb, family, firstClass, 
         }
     }
     return output;
-}
+};
