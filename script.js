@@ -87,6 +87,7 @@ function getMatches(origin, destination, age, doNotDisturb, family, firstClass, 
 };
 
 function get_flight_num(origin, dest){
+    // Flight numbers generated from FlightEngineAPI
     var flight_num = [1755, 2288, 4699, 2641, 3782, 5977, 3191, 8168, 7855, 4416, 4669, 7977, 3515, 683, 9806, 8609];
     var org_num;
     var dest_num;
