@@ -70,3 +70,18 @@ h2 {
 .icons {
     max-width: 200px;
 }
+
+/*Application*/
+
+.appDiv {
+    border-radius: 25px;
+    padding: 25px;
+    margin-top: 20px;
+    min-height: 80vh;
+    min-width: 85vw;
+}
+
+.leftCol {
+    text-align: center;
+}
+
